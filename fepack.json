@@ -1,0 +1,48 @@
+{
+    "server": {
+        "port": 8080
+    },
+    "release": {
+        "project": "Aurora",
+        "domain": "",
+        "coffee": false,
+
+        "cases": {
+            "dev": {
+                "watch": true,
+                "version": false,
+                "optimize": false,
+                "env": {
+                    "ENV": "LOCAL"
+                }
+            },
+            "qa": {
+                "watch": false,
+                "version": false,
+                "optimize": false
+            },
+            "www": {
+                "watch": false,
+                "version": true,
+                "optimize": true
+            }
+        },
+
+        "copy": [
+            "**/*.min.js",
+            "**/*.min.css",
+            "lib/**"
+        ],
+        "ignore": [
+            "fepack.json"
+        ],
+        "externals": {
+        },
+        "postcss": {
+        }
+    },
+    "deploy": {
+        "beRelease": "",
+        "feReleaseGit": ""
+    }
+}
